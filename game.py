@@ -30,7 +30,7 @@ class Game:
         
         # Setup rooms
 
-        forest = Room("Forest", "dans une forêt enchantée. Vous entendez une brise légère à travers la cime des arbres.")
+        forest = Room("Foret", "dans une forêt enchantée. Vous entendez une brise légère à travers la cime des arbres.")
         self.rooms.append(forest)
         tower = Room("Tower", "dans une immense tour en pierre qui s'élève au dessus des nuages.")
         self.rooms.append(tower)
