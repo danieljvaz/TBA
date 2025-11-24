@@ -5,11 +5,15 @@ class Player():
     def __init__(self, name):
         self.name = name
         self.current_room = None
+        self.directions = set()
     
     # Define the move method.
     def move(self, direction):
         # Get the next room from the exits dictionary of the current room.
-        next_room = self.current_room.exits[direction]
+        if direction not in self.directions:
+            print("\nDirection non reconnue!\n")
+            return False
+        next_room = self.current_room.exits.get(direction)
 
         # If the next room is None, print an error message and return False.
         if next_room is None:
